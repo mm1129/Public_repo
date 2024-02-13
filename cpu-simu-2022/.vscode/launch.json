@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/maimai/Downloads/最終完動ver",
-      "program": "/Users/maimai/Downloads/最終完動ver/build/Debug/outDebug"
+      "cwd": "/Users/maimai/Public_repo/cpu-simu-2022",
+      "program": "/Users/maimai/Public_repo/cpu-simu-2022/build/Debug/outDebug"
     }
   ]
 }

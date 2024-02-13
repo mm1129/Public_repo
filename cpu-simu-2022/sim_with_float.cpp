@@ -28,9 +28,9 @@ string debug_op;
 string break_label;
 int64_t clock_count;
 queue<int32_t> que; 
-string s = "/Users/maimai/my-3A/cpu-simu/simulator/高速化ver/sim_result.ppm";
+string s = "sim_result.ppm";
 ofstream ofs(s);
-string s2 = "/Users/maimai/my-3A/cpu-simu/simulator/高速化ver/sim_calc.txt";
+string s2 = "sim_calc.txt";
 ofstream ofs2(s2);
 #define SIZE 1024
 #define L_SIZE 4096
@@ -147,7 +147,7 @@ void sld_to_ppm(){
     string filename ("contest.dat"); 
     vector<string> lines;
     string line;
-    string s1 = "/Users/maimai/my-3A/cpu-simu/simulator/高速化ver/sim_base.ppm";
+    string s1 = "sim_base.ppm";
     ofstream ofs1(s1);
     ifstream file(filename, ios::binary);
     
