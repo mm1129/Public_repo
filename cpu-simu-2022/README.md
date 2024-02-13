@@ -57,7 +57,7 @@ void sld_to_ppm(){
     string filename ("contest.dat"); //asm_3
     vector<string> lines;
     string line;
-    string s1 = "/Users/maimai/my-3A/cpu-simu/sim_contest.ppm";
+    string s1 = "sim_contest.ppm";
 ````
 という部分はstring s1の名前の変更が必要
 入力ファイルcontest.dat(ppmファイルをdatファイルに変換したもの）を手元に置いてお使いください
