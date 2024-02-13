@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+	<title>服のデザイン</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<script src="script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+	<!-- <h1>服のデザイン</h1>
+	<h2>パラメータ調整</h2> -->
+	
+	<!-- <div class="panel"> -->
+		<div class="image-container" style="position: relative;">
+			<div class="under-image">
+				<img id="image" class="under-image" src="images/body0.png" alt="服の画像" style="display: block;margin: auto; ">
+			</div>	
+			<div id="outline"></div>
+			<canvas id="canvas" class="canvas-overlay" width="800" height="600"></canvas>
+			<script>
+				canvas.addEventListener('mousedown', handleMouseDown);
+				canvas.addEventListener('mouseup', handleMouseUp);
+				canvas.addEventListener('mousemove', handleMouseMove);
+				paintGarment();
+			</script>
+			<!-- <br>
+			  <button onclick="changeImage()">画像切り替え</button> -->
+			<div class="panel" style="position: absolute;  top:10%; left: 0;"> 
+				<label for="shoulder-width">肩幅:</label>
+				<input type="range" id="shoulder-width" class="slider" min="0" max="100" value="50", oninput="updateShoulderWidth(this.value)">
+				<br>
+				<label for="chest-circumference">胴回り:</label>
+				<input type="range" id="chest-circumference" class="slider" min="0" max="100" value="50", oninput="updateWaistWidth(this.value)">
+				<br>
+				<label for="sleeve-length">袖丈(長さ):</label>
+				<input type="range" id="sleeve-length" class="slider" min="0" max="100" value="50", oninput="updateSleeveLength(this.value)">
+				<br>
+				<button id="myButton" onclick="changeImage()">次の画像へ</button>
+				<h3>上のスライダーを使用、もしくは</h3>
+				<h3>写真の青い丸をドラッグして <br>
+					肩幅、胴回り、袖丈を調整</h3>
+				
+			</div> 
+			<h5>Use the slider above or <br>
+				Drag the blue circle in the photo <br>
+				 to adjust shoulder width, waist, and sleeve length
+			</h5>
+			<!-- <input type="range" id="sleeve-length" class="slider" min="0" max="100" value="50", oninput="updateSleeveLength(this.value)" style="writing-mode: bt-lr; appearance: slider-vertical;transform: rotate(-90deg);"> -->
+		</div>
+	<!-- </div> -->
+	
+	
+	<!-- <img id="image-overlay" src="images/body0.png" alt="画像1"> -->
+	
+	
+	
+	<h2>使い方</h2>
+	<p>
+		- 赤い点をドラッグして服の枠線を調整 <br>
+		右側の端点をドラッグすると操作しやすい<br>
+		1. 肩幅；肩上の赤い点を左右にドラッグ <br>
+		2. 腰回り：体の下の方の赤い点を左右にドラッグ <br>
+		3. 袖丈：手の辺りの赤い点を袖丈に合わせて長さを調整 <br>
+		勢いよくドラッグしても動きが悪くなったら再度赤い点に触れてドラッグ <br>
+		赤い点は動かす始点の目安でありマウスに完全に追随しているわけではないことに注意<br>
+		- スライダーでも操作可能
+	</p>
+	<div id="preview">
+		<!-- プレビュー画像や服のデザインの表示 -->
+	</div>
+
+	
+</body>
+</html>
