@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/maimai/Downloads/最終完動ver",
+      "program": "/Users/maimai/Downloads/最終完動ver/build/Debug/outDebug"
+    }
+  ]
+}
