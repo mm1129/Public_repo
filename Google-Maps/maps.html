@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Complex Marker Icons</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="script.js"> </script>
+    
+    <script>
+      
+      window.initMap = initMap;
+    </script>
+    
+    <style> 
+        #map, #pano{
+            height: 50%;
+            width: 50%;
+        }
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="pano"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly&solution_channel=GMP_CCS_complexmarkers_v1"
+      defer
+    ></script>
+  </body>
+</html>
