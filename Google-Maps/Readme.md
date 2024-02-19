@@ -4,7 +4,7 @@ the route to the start point and the goal point will be displayed below the map.
 The street view of the 10 points along the route is displayed in order, one second at a time.
 [How to use]
 Assign your Google Map API key to YOUR_API_KEY and open 'maps.html'.
-(This code is a temporary version and will be improved for a better user experience.)
+(This code is a temporary version made in a day and will be improved for a better user experience.)
 ![picture 0](../images/2843f16e017ae31c892780558c791bc914ca656522acf07c91dbe918139c1d8c.png)  
 
 
