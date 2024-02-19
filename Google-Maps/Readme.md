@@ -8,6 +8,10 @@ Assign your Google Map API key to YOUR_API_KEY and open 'maps.html'.
 ![picture 0](../images/2843f16e017ae31c892780558c791bc914ca656522acf07c91dbe918139c1d8c.png)  
 
 
+
+https://github.com/mm1129/Public_repo/assets/89204774/3cd595e9-d831-4235-997c-516eb03a8204
+
+
 マウスで２地点（start地点、goal地点）を指定すると
 そこまでの経路が表示されるとともに
 下に経路間の10地点のストリートビューが1秒ずつ順に表示される。
