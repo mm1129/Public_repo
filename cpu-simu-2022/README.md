@@ -3,6 +3,31 @@ Output Result: ppm file
 screenshot(512*512):
 <img width="445" alt="image" src="https://github.com/mm1129/Public_repo/assets/89204774/2a63d8fe-b16d-4dfd-bb9d-16bc1b0c820b">
 
+[結果] 
+```
+(256*256):インライン化なし 
+hit miss 972098126 314091708 
+clean dirty 191610371 79316335 
+実行命令数 18794963197 
+クロック数 28558617019
+duration = 1858.77sec. 
+実行時間予測(50MHz と仮定) 571.172sec
+
+<512*512> fast_mode(統計取得なし ver での時間) 
+実行命令数 65844101723
+duration = 1250.23sec.
+```
+[実行の仕方]
+```
+1.「最終完動 ver フォルダ」 or 「エミュレート修正_完動 ver」をダウンロード
+2.Make sim
+3. ./sim -g
+
+実行の際、最初にファイルを一旦読み込んだ時点でデバッグ用の print 文(ラベルの中 身や即値)が流れる
+それが終わり何も表示されなくなると実際の処理を行っている。
+```
+
+[旧version]
 ###ファイル構成
 <アセンブリ>
 `assembler.cpp`に実装
