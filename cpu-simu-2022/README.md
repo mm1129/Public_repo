@@ -1,3 +1,8 @@
+Output Result: ppm file
+
+screenshot:
+<img width="368" alt="image" src="https://github.com/mm1129/Public_repo/assets/89204774/8323346f-70ef-4b49-930e-56bfdafdfdb4">
+
 ###ファイル構成
 <アセンブリ>
 `assembler.cpp`に実装
