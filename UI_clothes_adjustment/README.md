@@ -1,3 +1,6 @@
+Created UI clothes adjustment tools.
+For class assignment: the picture of ladies were given.
+
 https://github.com/mm1129/Public_repo/assets/89204774/bbec10ba-3ea8-49a6-9183-6911542a03de
 main.htmlファイルをブラウザで開く
 と実行できます。
