@@ -1,3 +1,5 @@
+Implemented a CPU simulator using mainly c++ that reads input instructions from a file, processes them, and generates output in the form of a PPM image file. This involved parsing the input data, simulating the CPU's operations, include integer and float arithmetic operations. This was for school experiment.
+
 Output Result: ppm file
 
 screenshot(512*512):
@@ -19,8 +21,8 @@ duration = 1250.23sec.
 ```
 [実行の仕方]
 ```
-1.「最終完動 ver フォルダ」 or 「エミュレート修正_完動 ver」をダウンロード
-2.Make sim
+1.フォルダごとダウンロード
+2.make sim
 3. ./sim -g
 
 実行の際、最初にファイルを一旦読み込んだ時点でデバッグ用の print 文(ラベルの中 身や即値)が流れる
