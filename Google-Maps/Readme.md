@@ -2,14 +2,18 @@
 This code provides a feature that uses Google Street View to display street views at 10 points along a specified route, one second at a time. It is perfect for those who want to preview the route before visiting a complex city for the first time. I personally find it very useful as I often get lost in unfamiliar places.
 
 Features
+
 	•	Specify start and end points with the mouse
+ 
 	•	Display the route between the specified points
+ 
 	•	Show street views at 10 points along the route, one second at a time
 
 
 When two points (start point and goal point) are specified with the mouse,
 the route to the start point and the goal point will be displayed below the map.
 The street view of the 10 points along the route is displayed in order, one second at a time.
+
 [How to use]
 	
 
