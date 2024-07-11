@@ -4,6 +4,8 @@ the route to the start point and the goal point will be displayed below the map.
 The street view of the 10 points along the route is displayed in order, one second at a time.
 [How to use]
 Assign your Google Map API key to YOUR_API_KEY and open 'maps.html'.
+YOUR_API_KEY is in maps.html:
+`src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly&solution_channel=GMP_CCS_complexmarkers_v1"`
 (This code is a temporary version made in a day and will be improved for a better user experience.)
 For Walking
 
