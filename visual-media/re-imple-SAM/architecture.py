@@ -2,6 +2,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import torchvision.transforms as transforms
 import timm
 from typing import Optional, Tuple, List, Dict, Any
 
@@ -103,15 +104,40 @@ class ImageEncoder(nn.Module):
         # [256,64,64]に対し正規化
         self.ln1 = nn.LayerNorm([embedding_dim, img_size//16, img_size//16])
         self.ln2 = nn.LayerNorm([embedding_dim, img_size//16, img_size//16])
-
+        # Radial normalization
+        self.radial_norm1 = nn.GroupNorm(num_groups=32, num_channels=256)
+        self.radial_norm2 = nn.GroupNorm(num_groups=32, num_channels=560)
     def forward(self, x):
         # 画像を1024×1024にリサイズし、パディング
-        x = F.interpolate(x, size=(self.img_size, self.img_size), mode='bilinear', align_corners=False)
-        # vitで画像埋め込み
-        x = self.vit.patch_embed(x) #パッチに分割し、埋め込み
-        x = self.vit.pos_drop(x) #位置エンコーディング、ドロップアウト
-        for block in self.vit.blocks:
-            x = block(x) #transformer block順に適用
-        # (1024,1024) -> (1,64,64,)
-        x = x.view()
+        # x = F.interpolate(x, size=(self.img_size, self.img_size), mode='bilinear', align_corners=False)
+        # # vitで画像埋め込み
+        # x = self.vit.patch_embed(x) #パッチに分割し、埋め込み
+        # x = self.vit.pos_drop(x) #位置エンコーディング、ドロップアウト
+        # for block in self.vit.blocks:
+        #     x = block(x) #transformer block順に適用
+        # # (1024,1024) -> (1,64,64,)
+        # x = self.neck(x.permute(0, 3, 1, 2))
+
+        # return x
+        # Preprocess input
+        x = self.preprocess(x)
+
+        # Apply ViT
+        x = self.vit(x)
+
+        # Apply convolutions and radial normalization
+        x = self.conv1(x)
+        x = self.radial_norm1(x)
+        x = self.conv2(x)
+        x = self.radial_norm2(x)
+
+        return x
+
+    def preprocess(self, img):
+        preprocess = transforms.Compose([
+            transforms.Resize((1024, 1024)),
+            transforms.ToTensor(),
+            transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+        ])
+        return preprocess(img).unsqueeze(0)
 
