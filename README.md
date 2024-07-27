@@ -8,3 +8,6 @@ See repository for details.
 
 **UI_clothes_adjustment**
 Tool to adjust clothes size to fit body line.
+
+**visual-media**
+re-implementation of Segment Anything Model and Physformer (Facial Video-based Physiological Measurement with Temporal Difference Transformer)
